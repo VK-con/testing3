@@ -7,20 +7,21 @@
   body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #ffffff;
+  }
+
+  .logo {
+    text-align: center;
+    padding: 20px 0;
   }
 
   .container {
     background-color: #ffffff;
     border: 1px solid #ffffff;
     padding: 20px;
-    width: 350px; /* Maintained width */
-    height: 380px; /* Adjusted height for additional content */
-    margin-top: 50px; /* Move the container up slightly */
+    width: 350px;
+    height: 380px;
+    margin: 20px auto; /* Move the container up slightly and center it horizontally */
     box-shadow: none;
     text-align: center;
     display: flex;
@@ -57,160 +58,120 @@
   }
 
   .checkbox {
-    appearance:none; 
-   -webkit-appearance:none; 
-   -moz-appearance:none; 
-   -o-appearance:none; 
-   outline:none; 
-   height:auto; 
-   width:auto; 
-   cursor:pointer; 
-   background-color:#fff; 
-   border-radius:none; 
-   border:none; 
-   box-shadow:none; 
-   position:relative; 
-   top:auto; 
-   right:auto; 
-   bottom:auto; 
-   left:auto; 
-   float:none; 
-   clear:none; 
-   margin-right:auto; 
-   margin-left:auto
-}
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 50%; /* Rounded checkbox */
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
 
-.checkbox:checked:before {
-content:'\2713';
-display:block;
-text-align:center
-}
+  .checkbox:checked {
+    background-color: yellow; /* Yellow when checked */
+    border-color: yellow;
+  }
 
-.checkbox:checked {
-background-color:#fff
-}
+  .check-label {
+    margin-left: 5px;
+    font-weight: normal; /* Removed bold from label */
+    color: #cccccc; /* Set label color to grey */
+  }
 
-.checkbox:before {
-content:'';
-display:block
-}
+  .divider-line {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
 
-.checkbox:focus {
-outline:none
-}
+  .divider {
+    flex-grow: 1;
+    border-top: 1px solid #cccccc;
+  }
 
-.checkbox:hover:before {
-content:'\2713';
-display:block
-}
+  .or-text {
+    padding: 0 10px;
+    color: #cccccc;
+  }
 
-.checkbox:hover {
-background-color:#fff
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
-  
-.check-label {
-margin-left:.5em
-}
+  .qr-button {
+    background-color: #cccccc;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
 
-.logo-container{
-display:flex;
-justify-content:center;
+  .additional-links {
+    display: flex;
+    justify-content: space-between;
+    color: #cccccc;
+    margin-top: 15px;
+  }
 
-}
+  .additional-link {
+    color: #cccccc;
+    text-decoration: none;
+  }
+.bottom-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    color: #cccccc;
+    padding: 10px;
+    text-align: center;
+  }
 
-.logo{
-width:auto;
+  .bottom-links a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 12px; /* Reduce font size */
+  }
 
-}
-
-.bottom-links{
-font-size:x-small;
-
-}
-
-.bottom-links{
-border-top:solid grey;
-
-}
-
-
+  .bottom-line {
+    border-top: 1px solid #cccccc; /* Add a grey line above the links */
+  }
 </style>
 </head>
 <body>
-<div class="logo-container">
-<img class="logo" src="your-image-link-here">
-</div>
-<div class="container">
-<input class="login-input" type="text" placeholder="Kakao Mail ID, Email, Phone Number">
-<input class="login-input" type="password" placeholder="Password">
-<div class="check-box">
-<input type="checkbox" class="checkbox">
-<label class="check-label">Save Login Information</label>
-</div>
-<button class="login-button">Login</button>
-<div class="divider-line">
-<div class="divider"></div>
-<div class="or-text">or</div>
-<div class="divider"></div>
-</div>
-<button class="qr-button">Log In With QR Code</button>
-<div class="additional-links">
-<a class="additional-link" href="#">Sign Up</a>
-<a class="additional-link" href="#">Find Account</a>
-<a class="additional-link" href="#">Reset Password</a>
-</div>
+  <div class="logo">
+    <img src="YOUR_IMAGE_URL" alt="Logo">
+  </div>
+  <div class="container">
+    <input class="login-input" type="text" placeholder="Kakao Mail ID, Email, Phone Number">
+    <input class="login-input" type="password" placeholder="Password">
+    <div class="check-box">
+      <input type="checkbox" class="checkbox">
+      <label class="check-label">Save Login Information</label>
+    </div>
+    <button class="login-button">Login</button>
+    <div class="divider-line">
+      <div class="divider"></div>
+      <div class="or-text">or</div>
+      <div class="divider"></div>
+    </div>
+    <button class="qr-button">Log In With QR Code</button>
+    <div class="additional-links">
+      <a class="additional-link" href="#">Sign Up</a>
+      <a class="additional-link" href="#">Find Account</a>
+      <a class="additional-link" href="#">Reset Password</a>
+    </div>
 
-<div class="bottom-links">
-<a href="#">Terms of Service</a>
-<a href="#">Privacy Policy</a>
-<a href="#">Operation Policy</a>
-<a href="#">Customer Service</a>
-<a href="#">Notice</a>
-</div>
-
-</div>
-
+    <div class="bottom-line"></div>
+  <div class="bottom-links">
+    <a href="#">Terms of Service</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Operation Policy</a>
+    <a href="#">Customer Service</a>
+    <a href="#">Notice</a>
+  </div>
 </body>
-
-</html>
-
+</html> 
