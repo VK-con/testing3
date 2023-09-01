@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+
+  .container {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    width: 350px; /* Maintained width */
+    height: 380px; /* Adjusted height for additional content */
+    margin-top: 70px; /* Move the container up slightly */
+    box-shadow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0; /* Reduced margin */
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box; /* Include border in width */
+  }
+
+  .login-button {
+    background-color: yellow;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .check-box {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 50%; /* Rounded checkbox */
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .checkbox:checked {
+    background-color: yellow; /* Yellow when checked */
+    border-color: yellow;
+  }
+
+  .check-label {
+    margin-left: 5px;
+    font-weight: normal; /* Removed bold from label */
+    color: #cccccc; /* Set label color to grey */
+  }
+
+  .divider-line {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+
+  .divider {
+    flex-grow: 1;
+    border-top: 1px solid #cccccc;
+  }
+
+  .or-text {
+    padding: 0 10px;
+    color: #cccccc;
+  }
+
+  .qr-button {
+    background-color: #cccccc;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .additional-links {
+    display: flex;
+    justify-content: space-between;
+    color: #cccccc;
+    margin-top: 15px;
+  }
+
+  .additional-link {
+    color: #cccccc;
+    text-decoration: none;
+  }
+  .bottom-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    color: #cccccc;
+    padding: 10px;
+  }
+
+  .bottom-links a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <input class="login-input" type="text" placeholder="Kakao Mail ID, Email, Phone Number">
+    <input class="login-input" type="password" placeholder="Password">
+    <div class="check-box">
+      <input type="checkbox" class="checkbox">
+      <label class="check-label">Save Login Information</label>
+    </div>
+    <button class="login-button">Login</button>
+    <div class="divider-line">
+      <div class="divider"></div>
+      <div class="or-text">or</div>
+      <div class="divider"></div>
+    </div>
+    <button class="qr-button">Log In With QR Code</button>
+    <div class="additional-links">
+      <a class="additional-link" href="#">Sign Up</a>
+      <a class="additional-link" href="#">Find Account</a>
+      <a class="additional-link" href="#">Reset Password</a>
+    </div>
+
+    <div class="bottom-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Operation Policy</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Notice</a>
+      </div>
+  </div>
+</body>
+</html>
